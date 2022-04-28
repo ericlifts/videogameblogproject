@@ -505,3 +505,14 @@ textarea {
         margin-bottom: 25px;
     }
 }
+
+/* for the create post, category, dashboard */
+.dashboard {
+    margin-top: 30px;
+  }
+  .dashboard a {
+    all: revert;
+    font-size: 20px;
+    display: inline-block;
+    margin: 2px 0;
+  }
