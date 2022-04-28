@@ -24,11 +24,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [WelcomeController::class, 'index']) -> name('welcome.index');
 
 // to the video game blog page
-
 Route::get('/blog', [BlogController::class, 'index']) -> name('blog.index');
 
 // to see selected blog post 
-Route::get('/blog/selected-blog-post', [BlogController::class, 'show']) -> name('blog.index');
+Route::get('/blog/selected-blog-post', [BlogController::class, 'show']) -> name('blog.show');
+
+// to create a blog post
+Route::get('/blog/create', [BlogController::class, 'create']) -> name('blog.create');
+
+// to store a users blog to database
+Route::post('/blog', [BlogController::class, 'store']) -> name('blog.store');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
