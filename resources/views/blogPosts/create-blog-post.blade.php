@@ -6,7 +6,10 @@
 <main class="container" style="background-color: #fff;">
         <section id="contact-us">
             <h1 style="padding-top: 50px;">Create A Video Game Blog!</h1>
-            
+            @if(session('status'))
+                <p style = "color: lawngreen; text-align:center; font-size: 20px;">{{session('status')}}</p>
+                <br>
+            @endif
             <!-- Blog Form -->
             <div class="contact-form">
                 <form action="{{route('blog.store')}}" method="post" enctype="multipart/form-data">
