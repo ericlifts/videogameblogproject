@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -32,8 +33,20 @@ Route::get('/blog/create', [BlogController::class, 'create']) -> name('blog.crea
 // to see selected blog post 
 Route::get('/blog/{post:slug}', [BlogController::class, 'show']) -> name('blog.show');
 
+// to edit a blog post
+Route::get('/blog/{post}/edit}', [BlogController::class, 'edit']) -> name('blog.edit');
+
+// to update a blog post
+Route::put('/blog/{post}', [BlogController::class, 'update']) -> name('blog.update');
+
+// to delete a blog post
+Route::delete('/blog/{post}', [BlogController::class, 'destroy']) -> name('blog.destroy');
+
 // to store a users blog to database
 Route::post('/blog', [BlogController::class, 'store']) -> name('blog.store');
+
+//Category resource controller
+Route::resource('/categories', CategoryController::class);
 
 //
 // Route::get('/linkstorage', function () {

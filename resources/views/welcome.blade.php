@@ -4,7 +4,7 @@
 <!-- header -->
 <header class="header" style = "background-image: url({{asset("images/mainpage.jpg")}});">
         <div class="header-text">
-          <h1>Video Game Blog Test</h1>
+          <h1>Video Game Blog</h1>
           <h4>The best reviews out there...</h4>
         </div>
         <div class="overlay"></div>

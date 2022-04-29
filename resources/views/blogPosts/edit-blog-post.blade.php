@@ -5,19 +5,20 @@
 @section('main')
 <main class="container" style="background-color: #fff;">
         <section id="contact-us">
-            <h1 style="padding-top: 50px;">Create A Video Game Blog!</h1>
+            <h1 style="padding-top: 50px;">Edit your post!</h1>
             @if(session('status'))
                 <p style = "color: lawngreen; text-align:center; font-size: 20px;">{{session('status')}}</p>
                 <br>
             @endif
             <!-- Blog Form -->
             <div class="contact-form">
-                <form action="{{route('blog.store')}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('blog.update', $post)}}" method="post" enctype="multipart/form-data">
+                    @method('put')
                     @csrf
                    
                     <!-- Title -->
                     <label for="title"><span>Title</span></label>
-                    <input type="text" id="title" name="title" value="{{old('title')}}"/>
+                    <input type="text" id="title" name="title" value="{{$post-> title}}"/>
                     @error('title')
                        <p style="color: red; margin-bottom:25px">{{$message}}</p>
                     @enderror
@@ -29,22 +30,9 @@
                        <p style="color: red; margin-bottom:25px">{{$message}}</p>
                     @enderror
 
-                    <!-- Drop down -->
-                    <label for="categories"><span>Choose a category:</span></label>
-                    <select name="category_id" id="categories">
-                        <option selected disabled>Select option </option>
-                        @foreach($categories as $category)
-                        <option value="{{$category-> id}}">{{$category-> name}}</option>
-                        @endforeach
-                    </select>
-                    @error('category_id')
-                    <p style="color: red; margin-bottom:25px">{{$message}}</p>
-                 @enderror
-                    <br>
-                    <br>
                     <!-- Body-->
                     <label for="body"><span>Your Blog</span></label>
-                    <textarea id="body" name="body">{{old('body')}}</textarea>
+                    <textarea id="body" name="body">{{$post-> body}}</textarea>
                     <br>
                     @error('body')
                        <p style="color: red; margin-bottom:25px">{{$message}}</p>
