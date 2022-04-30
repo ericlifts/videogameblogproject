@@ -21,6 +21,7 @@ My project is a blog for reviewing video games. A user who has not been register
 
 ## How to deploy
 - To deploy use `./vendor/bin/sail up` in the videogameblog directory
+- If images do not work you may need to run `./vendor/bin/sail storage:link` in the videogameblog directory
 
 
 ## Contributers
