@@ -58,3 +58,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('/foo', function() {
+    Artisan::call('storage:link');
+});

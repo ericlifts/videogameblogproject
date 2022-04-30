@@ -19,8 +19,8 @@
         <section class="cards-blog latest-blog">
           @foreach($posts as $post)
         <div class="card-blog-content">
-          {{-- <img src="{{asset($post->imagePath)}}" alt="image" /> --}}
-          <img src="{{asset('images/diablo.jpg')}}" alt="image"
+          <img src="{{asset($post->imagePath)}}" alt="image" />
+          {{-- <img src="{{asset('images/diablo.jpg')}}" alt="image" --}}
           <p>
             {{$post-> created_at-> diffForHumans()}}
             <span>Written By  {{$post-> user-> name}}</span>
