@@ -22,12 +22,12 @@
       <section class="recommended">
         <p>Related</p>
         <div class="recommended-cards">
-          @foreach($relatedPosts as $relatedPosts)
-          <a href="">
+          @foreach($relatedPosts as $relatedPost)
+          <a href="{{route('blog.show', $relatedPost)}}">
             <div class="recommended-card">
-              <img src="{{asset($relatedPosts-> imagePath)}}" alt="image" loading="lazy" />
+              <img src="{{asset($relatedPost-> imagePath)}}" alt="image" loading="lazy" />
               <h4>
-                {{$relatedPosts-> title}}
+                {{$relatedPost-> title}}
               </h4>
             </div>
           </a>

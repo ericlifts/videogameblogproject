@@ -41,8 +41,8 @@
             </div>
               @endif
           @endauth
-          {{-- <img src="{{asset($post->imagePath)}}" alt="image" /> --}}
-          <img src="{{asset('test/elden.jpg')}}" alt="image"
+          <img src="{{asset($post->imagePath)}}" alt="image">
+          {{-- <img src="{{asset('test/elden.jpg')}}" alt="image"> --}}
           <p>
             {{$post-> created_at-> diffForHumans()}}
             <span>Written By  {{$post-> user-> name}}</span>
