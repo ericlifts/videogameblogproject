@@ -7,9 +7,9 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About My Project
+## About My Project and How it Works
 
-My project is a blog for reviweing video games.
+My project is a blog for reviewing video games. A user who has not been registered has access to the home page where they can see the four latest blog posts. They also have access to the blog page where they can search a blog. The search works as follows, the user can search any word/phrase they want and if a blog has that word/phrase in the title they be displayed. If not then they will recieve a message stating that there is no such blog. The user can also select a certain category that they wish to see. When the user selects a blog they are redirected to that blog which displays an image, how long ago it was created, who created it, the title, and the body of text. Below the body of text the user can also select 3 blog posts that relate to the one they are currently seeing. 
 
 - Uses laravel breeze for user authentication
 - [Powerful dependency injection container](https://laravel.com/docs/container).
