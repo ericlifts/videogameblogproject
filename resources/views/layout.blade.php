@@ -26,7 +26,7 @@
       <!-- sidebar -->
       <div class="sidebar">
         <span class="closeButton">&times;</span>
-        <p class="brand-title"><a href="">Video Game Blog</a></p>
+        <p class="brand-title"><a href="{{route('welcome.index')}}">Video Game Blog</a></p>
 
         <div class="side-links">
           <ul>
