@@ -26,7 +26,7 @@ My project is a blog for reviewing video games. A user who has not been register
 ## How to run seed
 - First `./vendor/bin/sail artisan migrate:fresh` to reset database
 - Second `./vendor/bin/sail artisan db:seed --class=UsersSeeder` to generate users
-- Third `./vendor/bin/sail artisan db:seed --class=CategorySeeder` to generate caregories for blogs
+- Third `./vendor/bin/sail artisan db:seed --class=CategorySeeder` to generate categories for blogs
 - Fourth `./vendor/bin/sail artisan db:seed --class=BlogSeeder` to create blog posts
 ## Contributers
 - Eric Aragon
