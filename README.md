@@ -27,7 +27,7 @@ My project is a blog for reviewing video games. A user who has not been register
 - First `./vendor/bin/sail artisan migrate` to run database migrations
 - Second `composer require laravel/breeze --dev` laravel breeze package
 - Third `./vendor/bin/sail artisan breeze:install` publishes the authentication views, routes, controllers, and other resources to your application
-- Fourth ``
+- Fourth `npm intall && npm run dev` command to build your assets
 
 ## How to run seed
 - First `./vendor/bin/sail artisan migrate:fresh` to reset database
