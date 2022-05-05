@@ -48,11 +48,7 @@ Route::post('/blog', [BlogController::class, 'store']) -> name('blog.store');
 //Category resource controller
 Route::resource('/categories', CategoryController::class);
 
-//
-// Route::get('/linkstorage', function () {
-//     Artisan::call('storage:link');
-// });
-
+//for the users dashboard 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
