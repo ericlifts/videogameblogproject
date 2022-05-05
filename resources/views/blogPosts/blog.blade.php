@@ -41,15 +41,18 @@
             </div>
               @endif
           @endauth
+          <h4>
+            <a href="{{route('blog.show', $post)}}"> {{$post-> title}}</a>
+          </h4>
           <img src="{{asset($post->imagePath)}}" alt="image">
           {{-- <img src="{{asset('test/elden.jpg')}}" alt="image"> --}}
           <p>
             {{$post-> created_at-> diffForHumans()}}
             <span>Written By  {{$post-> user-> name}}</span>
           </p>
-          <h4>
+          {{-- <h4>
             <a href="{{route('blog.show', $post)}}"> {{$post-> title}}</a>
-          </h4>
+          </h4> --}}
         </div>
         @empty
         <p style="color: red">Sorry, no such post exists!</p>

@@ -5,7 +5,7 @@
 <header class="header" style = "background-image: url({{asset("images/mainpage.jpg")}});">
         <div class="header-text">
           <h1>Video Game Blog</h1>
-          <h4>The best reviews out there...</h4>
+          
         </div>
         <div class="overlay"></div>
       </header>
@@ -19,15 +19,18 @@
         <section class="cards-blog latest-blog">
           @foreach($posts as $post)
         <div class="card-blog-content">
+          <h4>
+            <a href="{{route('blog.show', $post)}}"> {{$post-> title}}</a>
+          </h4>
           <img src="{{asset($post->imagePath)}}" alt="image" />
           {{-- <img src="{{asset('images/diablo.jpg')}}" alt="image" --}}
           <p>
             {{$post-> created_at-> diffForHumans()}}
             <span>Written By  {{$post-> user-> name}}</span>
           </p>
-          <h4>
+          {{-- <h4>
             <a href="{{route('blog.show', $post)}}"> {{$post-> title}}</a>
-          </h4>
+          </h4> --}}
         </div>
         @endforeach
         </section>

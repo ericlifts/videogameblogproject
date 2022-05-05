@@ -35,8 +35,12 @@ class CategorySeeder extends Seeder
             'name' => 'Action'
         ],
         [
+            'name' => 'RPG'
+        ],
+        [
             'name' => 'MMO'
-        ]
+        ],
+
 
         ]);
     }

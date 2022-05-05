@@ -12,6 +12,8 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     //to show categories list
     public function index()
     {
         $categories = Category::all();
@@ -23,6 +25,8 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     //to create a category
     public function create()
     {
         return view('categories.create-category');
@@ -34,6 +38,8 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+     //store category in database
     public function store(Request $request)
     {
         $request-> validate([

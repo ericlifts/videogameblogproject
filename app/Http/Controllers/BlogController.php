@@ -10,31 +10,36 @@ use App\Models\Category;
 
 class BlogController extends Controller
 {
+    //protect from middleware
     public function __construct() 
     {
         $this-> middleware('auth')-> except(['index', 'show']);
     }
 
+    //to show blogs, searched blogs, or clicked category blog 
     public function index(Request $request) {
         if($request -> search){
             $posts = Post::where('title', 'like', '%' . $request -> search . '%')
             -> orWhere('body', 'like', '%' . $request -> search . '%')-> latest()-> paginate(4);
         } 
             else if($request-> category){
-                $posts = Category::where('name', $request-> category)-> firstOrFail()-> posts()-> paginate(3)-> withQueryString();
+                $posts = Category::where('name', $request-> category)-> firstOrFail()-> posts()-> paginate(4)-> withQueryString();
             }
             else {
+                //shows 4 latest blog posts on blog page
             $posts = Post::latest()-> paginate(4);
         }
         $categories = Category::all();
         return view('blogPosts.blog', compact('posts', 'categories'));
     }
 
+    //create a blog with a category
     public function create() {
         $categories = Category::all();
         return view('blogPosts.create-blog-post', compact('categories'));
     }
 
+    //store and create a blog 
     public function store(Request $request) {
         
         $request-> validate([
@@ -77,6 +82,7 @@ class BlogController extends Controller
         // dd('Validation passed.');
     }
 
+    //to edit a blog post
     public function edit(Post $post){
         if(auth()-> user()-> id !== $post-> user-> id){
             abort(403);
@@ -84,6 +90,7 @@ class BlogController extends Controller
         return view('blogPosts.edit-blog-post', compact('post'));
     }
 
+    //updates the blog in database
     public function update(Request $request, Post $post){
         if(auth()-> user()-> id !== $post-> user-> id){
             abort(403);
@@ -114,12 +121,8 @@ class BlogController extends Controller
         // dd('Validation passed.');
     }
 
-    // public function show($slug) {
-    //     $post = Post::where('slug', $slug)-> first();
-    //     return view('blogPosts.selected-blog-post', compact('post'));
-    // }
 
-    //using route model binding
+    //using route model binding to show selected blog post and its 3 related blog posts
     public function show(Post $post){
         $category = $post-> category;
 
@@ -127,6 +130,7 @@ class BlogController extends Controller
         return view('blogPosts.selected-blog-post', compact('post', 'relatedPosts'));
     }
 
+    //to delete a blog post 
     public function destroy(Post $post){
         $post-> delete();
         return redirect()-> back()-> with('status', 'Your post was deleted successfully!');
