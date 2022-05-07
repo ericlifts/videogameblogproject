@@ -35,9 +35,7 @@ My project is a blog for reviewing video games. A user who has not been register
 - Third `./vendor/bin/sail artisan db:seed --class=CategorySeeder` to generate categories for blogs
 - Fourth `./vendor/bin/sail artisan db:seed --class=BlogSeeder` to create blog posts
 - Fifith `npm install && npm run dev` command to build your assets
-## Contributers
-- Eric Aragon
-- https://www.youtube.com/watch?v=a_AA7fHqNNs&t=4920s youtube video I followed
+
 
 
 
