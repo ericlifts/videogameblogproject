@@ -25,12 +25,12 @@ My project is a blog for reviewing video games. A user who has not been register
 - If images do not work you may need to run `./vendor/bin/sail storage:link` in the videogameblog directory
 
 ## Laravel breeze
-- First `./vendor/bin/sail artisan migrate` to run database migrations
+- First `./vendor/bin/sail artisan migrate` to run database migrations (if already done ingnore)
 - Second `composer require laravel/breeze --dev` laravel breeze package
 - Third `./vendor/bin/sail artisan breeze:install` publishes the authentication views, routes, controllers, and other resources to your application
 - Fourth `npm intall && npm run dev` command to build your assets
 
-## How to run seed
+## How to  test with seeds
 - First `./vendor/bin/sail artisan migrate:fresh` to reset database
 - Second `./vendor/bin/sail artisan db:seed --class=UsersSeeder` to generate users
 - Third `./vendor/bin/sail artisan db:seed --class=CategorySeeder` to generate categories for blogs
