@@ -20,23 +20,24 @@ My project is a blog for reviewing video games. A user who has not been register
 - mySQL workbench to connect to the database 
 
 ## How to deploy
-- To deploy use `./vendor/bin/sail up` in the videogameblog directory
+- To deploy use `./vendor/bin/sail up` 
 - Migrate database `./vendor/bin/sail artisan migrate`
-- If images do not work you may need to run `./vendor/bin/sail storage:link` in the videogameblog directory
+- to see images that you’ve uploaded `./vendor/bin/sail storage:link` 
+- All commmands should be done in the directory where files are located
 
-## Laravel breeze
+## Laravel breeze(DO NOT DO THIS IF EVERYTHING WORKS AFTER DEPLOYING)
 - First `./vendor/bin/sail artisan migrate` to run database migrations (if already done ingnore)
 - Second `composer require laravel/breeze --dev` laravel breeze package
 - Third `./vendor/bin/sail artisan breeze:install` publishes the authentication views, routes, controllers, and other resources to your application
 - Fourth `npm intall && npm run dev` command to build your assets
+- All commmands should be done in the directory where files are located 
 
 ## How to  test with seeds
 - First `./vendor/bin/sail artisan migrate:fresh` to reset database
 - Second `./vendor/bin/sail artisan db:seed --class=UsersSeeder` to generate users
 - Third `./vendor/bin/sail artisan db:seed --class=CategorySeeder` to generate categories for blogs
 - Fourth `./vendor/bin/sail artisan db:seed --class=BlogSeeder` to create blog posts
-- Fifith `npm install && npm run dev` command to build your assets
-
+- All commmands should be done in the directory where files are located 
 ## Contributors 
 - Eric Aragon
 
