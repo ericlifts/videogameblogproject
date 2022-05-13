@@ -9,7 +9,7 @@
 
 <h1>Video Game Blog</h1>
 <img src="https://cdn.glitch.global/cd543e2f-5e90-430c-ab6e-370dbc407615/Home%20-%20Video%20Game%20Blog%20-%20Google%20Chrome%205_12_2022%201_25_20%20PM.png?v=1652406947811">
-<img src="https://cdn.glitch.global/cd543e2f-5e90-430c-ab6e-370dbc407615/Home%20-%20Video%20Game%20Blog%20-%20Google%20Chrome%205_12_2022%206_56_18%20PM.png?v=1652407196650">
+<img src="https://cdn.glitch.global/cd543e2f-5e90-430c-ab6e-370dbc407615/Home%20-%20Video%20Game%20Blog%20-%20Google%20Chrome%205_12_2022%206_56_18%20PM.png?v=1652407875991">
 <img src="https://cdn.glitch.global/cd543e2f-5e90-430c-ab6e-370dbc407615/Home%20-%20Video%20Game%20Blog%20-%20Google%20Chrome%205_12_2022%206_56_45%20PM.png?v=1652407245919">
 <img src="https://cdn.glitch.global/cd543e2f-5e90-430c-ab6e-370dbc407615/Home%20-%20Video%20Game%20Blog%20-%20Google%20Chrome%205_12_2022%206_56_27%20PM.png?v=1652407339498">
 <img src="https://cdn.glitch.global/cd543e2f-5e90-430c-ab6e-370dbc407615/Home%20-%20Video%20Game%20Blog%20-%20Google%20Chrome%205_12_2022%206_56_35%20PM.png?v=1652407306814">
